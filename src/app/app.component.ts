@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import{ SafeValue} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'qr-code-genarator';
+  title='qr code generator';
+  qrdata='hellow1234';
+  qrcodedownloadlink: SafeValue = '';
+
+onchange(url: SafeValue){
+ this.qrcodedownloadlink = url;
+ 
+}
+
+
 }
